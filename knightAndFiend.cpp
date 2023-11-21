@@ -64,7 +64,7 @@ int main() {
       std::cout << "------------------------------" << std::endl;
     
       if (emptyLoc == 0) {
-        std::cout << "no empty locations left!\n";
+        std::cout << "sorry, no plants left!\n";
         _status = GameStatus::FINISHED;
         globalCV.notify_one();
         break;
@@ -83,7 +83,7 @@ int main() {
       }
       //  if farmer caught the fiend
       else if (idx == chosenValue) {
-        std::cout << "got caught!\n";
+        std::cout << "congratulations!, fiend got caught!\n";
         _status = GameStatus::FINISHED;
         globalCV.notify_one();
         break;
@@ -97,7 +97,7 @@ int main() {
   farmerThread.join();
   fiendThread.join();
 
-  std::cout << "program terminated!" << std::endl;
+  // std::cout << "program terminated!" << std::endl;
 
   return 0;
 }

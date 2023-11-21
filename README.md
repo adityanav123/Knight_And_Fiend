@@ -4,6 +4,6 @@ In the grim game you play as the knight, your fate teeters on a precarious balan
 
 
 ## How to execute?
-`bash
+`
     bash execute.sh
 `
